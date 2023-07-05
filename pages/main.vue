@@ -50,7 +50,7 @@ export default {
       this.$router.push('/');
     }
     else{
-      fetch('https://localhost:29001/SpecGroup', {
+      fetch('https://localhost:29001/specgroup', {
       method: 'GET',
       headers: {
         'Authorization': 'Bearer '+token,
@@ -68,7 +68,7 @@ export default {
   watch(() => state.selectedGroupId, async (newValue) => {
     if (newValue) {
     try {
-      const response = await fetch(`https://localhost:29001/Specialities?spec_group_id=${newValue}`, {
+      const response = await fetch(`https://localhost:29001/specialities?spec_group_id=${newValue}`, {
         method: 'GET', server : false,
         headers: {
         'Accept': 'application/json',
